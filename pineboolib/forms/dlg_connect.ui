@@ -7,13 +7,250 @@
     <x>0</x>
     <y>0</y>
     <width>731</width>
-    <height>423</height>
+    <height>438</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Connect</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="3">
+       <widget class="QPushButton" name="pbnMostrarProyectos">
+        <property name="text">
+         <string>Mostrar Proyectos Guardados en la Tabla</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_PROYECTO">
+        <property name="text">
+         <string>PROYECTO:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pbnCargarDatos">
+        <property name="text">
+         <string>Cargar Proyecto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pbnBorrarProyecto">
+        <property name="text">
+         <string>Borrar Proyecto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pbnGuardarProyecto">
+        <property name="text">
+         <string>Guardar Proyecto</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" rowspan="9" colspan="3">
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_ID">
+        <property name="text">
+         <string>ID proyecto:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLineEdit" name="leID"/>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_Name">
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLineEdit" name="leName"/>
+      </item>
+      <item row="4" column="3" colspan="2">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLabel" name="label_DATABASE">
+        <property name="text">
+         <string>DATABASE :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLabel" name="label_DBName">
+        <property name="text">
+         <string>Database Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QLineEdit" name="leDBName"/>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLabel" name="label_DBType">
+        <property name="text">
+         <string>DataBase TYPE:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QLineEdit" name="leDBType"/>
+      </item>
+      <item row="8" column="3">
+       <widget class="QLabel" name="label_Host">
+        <property name="text">
+         <string>Host</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QLineEdit" name="leHost"/>
+      </item>
+      <item row="9" column="3">
+       <widget class="QLabel" name="label_Port">
+        <property name="text">
+         <string>Port</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QLineEdit" name="lePort"/>
+      </item>
+      <item row="10" column="3" colspan="2">
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="3">
+       <widget class="QLabel" name="label_CREDENTIALS">
+        <property name="text">
+         <string>CREDENTIALS :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="label_FolderSQLITE">
+        <property name="text">
+         <string>Folder</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <widget class="QLineEdit" name="leFolderSQLITE">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QToolButton" name="pbnSearchFolder">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="3">
+       <widget class="QLabel" name="label_User">
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="4">
+       <widget class="QLineEdit" name="leUserName"/>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="label_ProyElegido">
+        <property name="text">
+         <string>proyecto:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1">
+       <widget class="QLineEdit" name="leProyElegID">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2">
+       <widget class="QToolButton" name="pbnSearchFolder_2">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="3">
+       <widget class="QLabel" name="label_Password">
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="4">
+       <widget class="QLineEdit" name="lePassword">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+     <zorder>label_FolderSQLITE</zorder>
+     <zorder>leFolderSQLITE</zorder>
+     <zorder>pbnSearchFolder</zorder>
+     <zorder>label_PROYECTO</zorder>
+     <zorder>label_Name</zorder>
+     <zorder>leName</zorder>
+     <zorder>line</zorder>
+     <zorder>label_DATABASE</zorder>
+     <zorder>label_DBName</zorder>
+     <zorder>leDBName</zorder>
+     <zorder>label_DBType</zorder>
+     <zorder>leDBType</zorder>
+     <zorder>label_Host</zorder>
+     <zorder>leHost</zorder>
+     <zorder>label_Port</zorder>
+     <zorder>lePort</zorder>
+     <zorder>line_2</zorder>
+     <zorder>label_CREDENTIALS</zorder>
+     <zorder>label_User</zorder>
+     <zorder>leUserName</zorder>
+     <zorder>label_ProyElegido</zorder>
+     <zorder>leProyElegID</zorder>
+     <zorder>pbnSearchFolder_2</zorder>
+     <zorder>label_Password</zorder>
+     <zorder>lePassword</zorder>
+     <zorder>pbnCargarDatos</zorder>
+     <zorder>pbnMostrarProyectos</zorder>
+     <zorder>pbnStart</zorder>
+     <zorder>pbnBorrarProyecto</zorder>
+     <zorder>pbnGuardarProyecto</zorder>
+     <zorder>label_ID</zorder>
+     <zorder>leID</zorder>
+     <zorder>tableView</zorder>
+    </widget>
+   </item>
    <item>
     <widget class="QPushButton" name="pbnStart">
      <property name="text">
@@ -25,179 +262,6 @@
      <property name="flat">
       <bool>false</bool>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QFrame" name="frame">
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_FolderSQLITE">
-        <property name="text">
-         <string>Folder</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="leFolderSQLITE">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QToolButton" name="pbnSearchFolder">
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="label_PROYECTO">
-        <property name="text">
-         <string>PROYECTO:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" rowspan="7" colspan="2">
-       <widget class="QTableView" name="tableView"/>
-      </item>
-      <item row="1" column="3">
-       <widget class="QLabel" name="label_Name">
-        <property name="text">
-         <string>Name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="4">
-       <widget class="QLineEdit" name="leName"/>
-      </item>
-      <item row="2" column="3" colspan="2">
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="3">
-       <widget class="QLabel" name="label_DATABASE">
-        <property name="text">
-         <string>DATABASE :</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="3">
-       <widget class="QLabel" name="label_DBName">
-        <property name="text">
-         <string>Database Name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="4">
-       <widget class="QLineEdit" name="leDBName"/>
-      </item>
-      <item row="5" column="3">
-       <widget class="QLabel" name="label_DBType">
-        <property name="text">
-         <string>DataBase TYPE:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="4">
-       <widget class="QLineEdit" name="leDBType"/>
-      </item>
-      <item row="6" column="3">
-       <widget class="QLabel" name="label_Host">
-        <property name="text">
-         <string>Host</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="4">
-       <widget class="QLineEdit" name="leHost"/>
-      </item>
-      <item row="7" column="3">
-       <widget class="QLabel" name="label_Port">
-        <property name="text">
-         <string>Port</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="4">
-       <widget class="QLineEdit" name="lePort"/>
-      </item>
-      <item row="8" column="3" colspan="2">
-       <widget class="Line" name="line_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="3">
-       <widget class="QLabel" name="label_CREDENTIALS">
-        <property name="text">
-         <string>CREDENTIALS :</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="3">
-       <widget class="QLabel" name="label_User">
-        <property name="text">
-         <string>Username</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="4">
-       <widget class="QLineEdit" name="leUserName"/>
-      </item>
-      <item row="11" column="0">
-       <widget class="QLabel" name="label_ProyElegido">
-        <property name="text">
-         <string>proyecto:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="1">
-       <widget class="QLineEdit" name="leProyElegID">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="2">
-       <widget class="QToolButton" name="pbnSearchFolder_2">
-        <property name="text">
-         <string>...</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="3">
-       <widget class="QLabel" name="label_Password">
-        <property name="text">
-         <string>Password</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="4">
-       <widget class="QLineEdit" name="lePassword">
-        <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="1">
-       <widget class="QPushButton" name="pbnCargarDatos">
-        <property name="text">
-         <string>Cargar Datos</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </widget>
    </item>
   </layout>
