@@ -89,6 +89,7 @@ class DlgConnect(QtGui.QWidget):
 
         # muestra tabla
         DlgConnect.TABLEVIEW = self.ui.tableView
+        ui = uic.loadUi(filedir('forms/dlg_connect.ui'), DlgConnect.TABLEVIEW)
         # DlgConnect.view1.show()
 
 
@@ -158,12 +159,12 @@ class DlgConnect(QtGui.QWidget):
         # pdb.set_trace()
         # print ("escribe `n´(next) para continuar / `q´(quit) para salir / `c´ para seguir sin debugg")
 
-        # db = QtSql.QSqlDatabase.addDatabase('QSQLITE')
-        # db.setDatabaseName('./projects/pinebooconectores.sqlite')   
+        db2 = QtSql.QSqlDatabase.addDatabase('QSQLITE')
+        db2.setDatabaseName('./projects/pinebooconectores.sqlite')   
 
         
-        db = sqlite3.connect('./projects/pinebooconectores.sqlite')
-        cursor = db.cursor()
+        #db = sqlite3.connect('./projects/pinebooconectores.sqlite')
+        #cursor = db.cursor()
         
         # mostrar la tabla proyectos de la base de datos SQLITE pinebooconectores.sqlite con los campos en el widget viewTable de dlgconnect.ui
         # initializeModel(model)
@@ -174,7 +175,7 @@ class DlgConnect(QtGui.QWidget):
         class MyForm(QtGui.QDialog):
             def ShowTable(self) :
                 # QtGui.QWidget.ShowTable(self)
-                self.ui = uic.loadUi(filedir('forms/dlg_connect.ui'), tableView)
+                # self.ui = uic.loadUi(filedir('forms/dlg_connect.ui'), tableView)
                 # self.ui = Ui_Dialog()
                 # self.ui.tableView(self)
                 self.model = QtSql.QSqlTableModel(self)
@@ -193,11 +194,23 @@ class DlgConnect(QtGui.QWidget):
                 self.ui.tableView.setModel (self.model)
         # app = QtGui.QApplication(sys.argv)
         # self.ui.tableView.show()
-        if __name__ == '__main__': # only executes the below code if it python has run it as the main
-            app = QtGui.QApplication(sys.argv) # before this was getting called twice
-            myapp = MyForm()
-            myapp.show()
-            sys.exit(app.exec_())
+        #if __name__ == '__main__': # only executes the below code if it python has run it as the main
+        #    app = QtGui.QApplication(sys.argv) # before this was getting called twice
+        #    myapp = MyForm()
+        #    myapp.show()
+        #    sys.exit(app.exec_())
+        # DlgConnect.TABLEVIEW = self.ui.tableView
+        # ui = uic.loadUi(filedir('forms/dlg_connect.ui'), self.ui.tableView)
+        model = QtSql.QSqlTableModel(self)
+        model.setTable("proyectos")
+        model.setEditStrategy(QtSql.QSqlTableModel.OnFieldChange)
+        model.select()
+        view = QTableView()
+        view.setModel(model)
+        view.show
+
+        ui = uic.loadUi(filedir('forms/dlg_connect.ui'), self.ui.tableView)
+        
         # def createView(title, model):
         #   view = QtGui.QTableView()
         #   view.setModel(model)
@@ -217,7 +230,7 @@ class DlgConnect(QtGui.QWidget):
 
         # db.close()
 
-        DlgConnect.TABLEVIEW.show()
+        # DlgConnect.TABLEVIEW.show()
 
     @QtCore.pyqtSlot()
     def DeleteProject(self):
